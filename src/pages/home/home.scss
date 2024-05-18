@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
+$fontMain: "Black Ops One", system-ui;
+@import url("https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap");
+$fontPrimary: "Poetsen One", sans-serif;
+
+.home_page {
+  width: 99.7vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  header {
+    width: 99.7%;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(42, 1, 42);
+    color: white;
+    padding: 2px;
+    border-radius: 5px;
+    .left {
+      height: 100%;
+
+      .user_box {
+        height: 100%;
+
+        img {
+          height: 50px;
+          border-radius: 50%;
+          background-color: white;
+        }
+
+        span {
+          font-size: 20px;
+          margin-left: 5px;
+          font-family: $fontMain;
+        }
+      }
+    }
+
+    .right {
+    }
+  }
+
+  .content {
+    padding: 2px;
+    height: calc(100vh - 54px);
+    background-color: rgb(117, 83, 117);
+    .content_box {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .top_menu {
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        width: 100%;
+        margin: 2px 0;
+        border-radius: 5px;
+        span {
+          font-family: $fontPrimary;
+        }
+        .load_refresh {
+          outline: none;
+          border: none;
+        }
+      }
+      .device_list {
+        margin: 2px 0;
+        width: 100%;
+        height: calc(100vh - 44px - 54px);
+        background-color: white;
+        border-radius: 5px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        * {
+          text-align: center;
+        }
+        .table_name {
+          font-family: $fontPrimary;
+        }
+        .btn-tool {
+          margin-right: 2px;
+        }
+      }
+    }
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px violet;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
